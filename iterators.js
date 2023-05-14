@@ -7,9 +7,7 @@
 //
 const array = [1, 2, 3, 4, 5];
 function logger(array) {
-  array.forEach((number) => {
-    console.log(number);
-  });
+  array.forEach((number) => console.log(number));
 }
 logger(array);
 
@@ -31,6 +29,11 @@ const toCelsius = function (temperatures) {
 
   return C;
 };
+
+//other way
+//const toCel =  (temperatures) =>
+// temperatures.map((F) => (F - 23) * (5 / 9));
+//console.log(C);
 
 /**************************************
  * hottestDays(temperatures, threshhold)
@@ -64,7 +67,7 @@ const hottestDays = function (temperatures, threshhold) {
 const logHottestDays = function (temperatures, threshhold) {
   const filterArr = hottestDays(temperatures, threshhold);
   const cel = toCelsius(filterArr);
-  logger(filterArr);
+  logger(cel);
 };
 
 /* Uncomment the following lines to test your code... */
